@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfde56f1-2524-44ef-81a0-7167abaf9ac7" name="Changes" comment="" />
+    <list default="true" id="bfde56f1-2524-44ef-81a0-7167abaf9ac7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,16 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;rjzc&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Codigos/Java/SudokuGame/src/main/java/com/example/sudokugame&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Codigos\Java\SudokuGame\src\main\java\com\example\sudokugame" />
+      <recent name="C:\Users\Usuario\Codigos\Java\SudokuGame\src\main\resources\com\example\sudokugame" />
+      <recent name="C:\Users\Usuario\Codigos\Java\SudokuGame\src\main\java\com\example\sudokugame\view" />
+      <recent name="C:\Users\Usuario\Codigos\Java\SudokuGame\src\main\java\com\example\sudokugame\controller" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -56,7 +83,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713732242676</updated>
-      <workItem from="1713732243930" duration="9000" />
+      <workItem from="1713732243930" duration="3457000" />
+      <workItem from="1713895383992" duration="1310000" />
+      <workItem from="1713902530726" duration="3383000" />
+      <workItem from="1713980624422" duration="17724000" />
+      <workItem from="1714013544062" duration="69000" />
+      <workItem from="1714073127961" duration="27562000" />
+      <workItem from="1714136960725" duration="8892000" />
     </task>
     <servers />
   </component>
@@ -68,10 +101,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SudokuGame$Main.ic" NAME="Main Coverage Results" MODIFIED="1713998931187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.sudokugame.*</FILTER>
+    </SUITE>
   </component>
 </project>
