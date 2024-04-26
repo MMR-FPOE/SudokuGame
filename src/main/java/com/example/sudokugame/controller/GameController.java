@@ -130,4 +130,3 @@ public class GameController {
     public void getPlayerNickname(String nickname){
         playerNickname.setText(nickname);
     }
-}
