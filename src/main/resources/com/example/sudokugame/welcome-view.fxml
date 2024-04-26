@@ -38,8 +38,11 @@
                <font>
                   <Font name="SansSerif Regular" size="14.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </TextField>
-            <Button mnemonicParsing="false" style="-fx-background-color: #4b0082;" text="Comenzar Partida" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: #4b0082;" text="Comenzar Partida" textFill="WHITE">
                <font>
                   <Font name="Sitka Banner Bold" size="18.0" />
                </font>
