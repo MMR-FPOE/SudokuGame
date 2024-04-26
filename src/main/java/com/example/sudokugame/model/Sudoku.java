@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Sudoku{
+public class Sudoku implements ISudoku{
     Random rand = new Random();
     ArrayList<ArrayList<Integer>> fullSudokuTable;
 
@@ -35,6 +35,7 @@ public class Sudoku{
         }
     }
 
+    //private
     private ArrayList<Integer> getRandomNumbers(){
         ArrayList<Integer> randomNumbers = new ArrayList<>();
         while (randomNumbers.size() < 5){
