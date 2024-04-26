@@ -23,3 +23,4 @@ public class WelcomeController {
         controller.getPlayerNickname(getNickname);
         WelcomeStage.deleteInstance();
     }
+}
