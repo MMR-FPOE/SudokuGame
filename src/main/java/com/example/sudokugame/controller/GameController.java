@@ -3,6 +3,7 @@ package com.example.sudokugame.controller;
 import com.example.sudokugame.model.NumberField;
 import com.example.sudokugame.model.Sudoku;
 
+import com.example.sudokugame.view.alert.AlertBox;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -121,10 +122,13 @@ public class GameController {
         lifesCounter.setText(lifesHearts);
     }
     private void checkWin() {
-        if(sudoku.sudokuComplete())
+        if(sudoku.sudokuComplete()) {
             System.out.println("YOU WIN");
-        else if(lifes == 0)
+            new AlertBox().WinOrLose("Ganaste", "El juego terminó", "¡Felicitades has completado el Sudoku :)");
+        }else if(lifes == 0) {
             System.out.println("YOU LOSE");
+            new AlertBox().WinOrLose("Perdiste", "El juego terminó", "No has completado el Sudoku");
+        }
 
     }
     public void getPlayerNickname(String nickname){
