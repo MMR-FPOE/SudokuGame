@@ -1,10 +1,8 @@
 package com.example.sudokugame.model;
 
-import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -13,6 +11,7 @@ public class NumberField{
     int rowPos, colPos;
     TextField numberField;
 
+    // NumberField constructor that add all TextField characteristic
     public NumberField(int row, int col){
         rowPos = row;
         colPos = col;
@@ -24,11 +23,26 @@ public class NumberField{
         numberField.setFocusTraversable(false);
         numberField.setFont(Font.font("Arial", 30 ));
         numberField.setBorder(new Border(new BorderStroke(Color.GRAY, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+        // To create margins among quadrants
         marginAndBorders(row,col);
     }
-    public int getRow(){ return rowPos;}
-    public int getCol(){ return colPos;}
-    public TextField getField(){ return numberField; }
+
+    // Return row position
+    public int getRow(){
+        return rowPos;
+    }
+
+    // Return column position
+    public int getCol(){
+        return colPos;
+    }
+
+    // Return TextField Object
+    public TextField getField(){
+        return numberField;
+    }
+
+    // Method that put margins among quadrants
     private void marginAndBorders(int row, int col){
         if(row > 2 && row < 6)
             numberField.setTranslateY(5);
