@@ -12,10 +12,15 @@ import javafx.scene.control.Label;
 import java.util.ArrayList;
 
 public class GameController {
-    int lifes = 7;  // Game's lifes
+    // Game's lifes
+    int lifes = 7;
     NumberField numberField;
     Sudoku sudoku = new Sudoku();
-    ArrayList<ArrayList<NumberField>> fields = new ArrayList<>();   // ArrayList where are all NumberField fields
+
+    // ArrayList where are all NumberField fields
+    ArrayList<ArrayList<NumberField>> fields = new ArrayList<>();
+
+    // Graphic Interface variables
     @FXML
     private GridPane sudokuGridPane;
     @FXML
@@ -23,6 +28,9 @@ public class GameController {
     @FXML
     private Label lifesCounter;
 
+    /**
+     * Start controller class
+     */
     @FXML
     public void initialize(){
         for (int i=0; i<9; i++) {
@@ -47,7 +55,9 @@ public class GameController {
         updateLifes();
     }
 
-    // KeyEvent assigned to each NumberField in ArrayList<ArrayList>
+    /**
+     * KeyEvent assigned to each NumberField in ArrayList<ArrayList>
+     */
     private void keyEvent(){
         for (ArrayList<NumberField> row: fields ){
             for (NumberField element: row){
@@ -56,7 +66,12 @@ public class GameController {
         }
     }
 
-    // Check every character that is typed in any TextField
+    /**
+     * Check every character that is typed in any TextField
+     * @param event     Event that is happening
+     * @param row       TextField row position
+     * @param col       TextField column position
+     */
     private void updateNumber(Event event, int row, int col){
         // This TextField is where the event happened
         TextField field = (TextField) event.getSource();
@@ -83,7 +98,14 @@ public class GameController {
             emptyField(field);}
     }
 
-    // Check if number doesn't repeat in row, column and quadrant
+    /**
+     * Check if number doesn't repeat in row, column and quadrant
+     *
+     * @param field     TextField Object
+     * @param number    Number in TextField
+     * @param row       TextField row position
+     * @param col       TextField column position
+     */
     private void checkNumberInSudokuTable(TextField field, int number, int row, int col){
         boolean isRepeat = false;
         // Check number in row
@@ -130,30 +152,51 @@ public class GameController {
             emptyField(field);      // Default TextField Style
     }
 
-    // Default numbers and TextFields Styles
+    /**
+     * Default numbers and TextFields Styles
+     *
+     * @param field     TextField Object
+     * @param number    Number in TextField
+     */
     public void gameField(TextField field, int number){
         field.setText(String.valueOf(number));
         field.addEventFilter(MouseEvent.MOUSE_PRESSED, Event::consume);
         field.setStyle("-fx-text-fill: INDIGO; -fx-background-color: #E6E6FA");
     }
 
-    // Default TextField Style
+    //
+
+    /**
+     * Default TextField Style
+     *
+     * @param field     TextField Object
+     */
     public void emptyField(TextField field){
         field.setStyle("-fx-text-fill: BLACK");
     }
 
-    // When number is repeat in row, column or quadrant, TextField will adopt this style
+    //
+
+    /**
+     * When number is repeat in row, column or quadrant, TextField will adopt this style
+     *
+     * @param field     TextField Object
+     */
     private void wrongNumber(TextField field){
         field.setStyle("-fx-text-fill: RED; -fx-background-color: #FFCBCB");
     }
 
-    // Update Hearts Lifes variable and set it in game-view
+    /**
+     * Update Hearts Lifes variable and set it in game-view
+     * */
     private void updateLifes(){
         String lifesHearts = "💖".repeat(lifes);
         lifesCounter.setText(lifesHearts);
     }
 
-    // Check if Sudoku Table is full
+    /**
+     * Check if Sudoku Table is full
+     */
     private void checkWin() {
         if(sudoku.sudokuComplete()) {
             new AlertBox().WinOrLose("Ganaste", "El juego terminó", "¡Felicitades has completado el Sudoku :)");
@@ -162,7 +205,11 @@ public class GameController {
         }
     }
 
-    // Receive Player name to Put in game-view
+    /**
+     * Receive Player name to Put in game-view
+     *
+     * @param nickname  Assigned in WelcomeController
+     */
     public void getPlayerNickname(String nickname){
         playerNickname.setText(nickname);
     }

@@ -8,6 +8,13 @@ import java.io.IOException;
 
 public class AlertBox {
 
+    /**
+     * Method that creates Alert and its logic
+     *
+     * @param title     Title of AlertBox
+     * @param header    Main content of AlertBox
+     * @param content   Content of AlertBox
+     */
     public void WinOrLose(String title, String header, String content){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);

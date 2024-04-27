@@ -11,7 +11,12 @@ public class NumberField{
     int rowPos, colPos;
     TextField numberField;
 
-    // NumberField constructor that add all TextField characteristic
+    /**
+     * NumberField constructor that add all TextField characteristic
+     *
+     * @param row Row Position
+     * @param col Column Position
+     */
     public NumberField(int row, int col){
         rowPos = row;
         colPos = col;
@@ -27,22 +32,35 @@ public class NumberField{
         marginAndBorders(row,col);
     }
 
-    // Return row position
+    /**
+     * Return row position
+     */
     public int getRow(){
         return rowPos;
     }
 
-    // Return column position
+    /**
+     * Return column position
+     *
+     * @return col position
+     */
     public int getCol(){
         return colPos;
     }
 
-    // Return TextField Object
+    /**
+     * @return TextField Object
+     */
     public TextField getField(){
         return numberField;
     }
 
-    // Method that put margins among quadrants
+    /**
+     * Method that put margins among quadrants
+     *
+     * @param row   TextField Row
+     * @param col   TextField Column
+     */
     private void marginAndBorders(int row, int col){
         if(row > 2 && row < 6)
             numberField.setTranslateY(5);

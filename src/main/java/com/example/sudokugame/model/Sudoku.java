@@ -8,7 +8,9 @@ public class Sudoku implements ISudoku{
     Random rand = new Random();
     ArrayList<ArrayList<Integer>> fullSudokuTable;
 
-    // Public Sudoku constructor that defines Sudoku ArrayList<ArrayList>
+    /**
+     * Public Sudoku constructor that defines Sudoku ArrayList<ArrayList>
+     */
     public Sudoku(){
         fullSudokuTable = new ArrayList<>();
         fullSudokuTable.add(new ArrayList<>(Arrays.asList(3, 1, 6, 5, 7, 8, 4, 9, 2)));
@@ -20,10 +22,13 @@ public class Sudoku implements ISudoku{
         fullSudokuTable.add(new ArrayList<>(Arrays.asList(1, 3, 8, 9, 4, 7, 2, 5, 6)));
         fullSudokuTable.add(new ArrayList<>(Arrays.asList(6, 9, 2, 3, 5, 1, 8, 7, 4)));
         fullSudokuTable.add(new ArrayList<>(Arrays.asList(7, 4, 5, 2, 8, 6, 3, 1, 9)));
-        gameTable();    // Choose randoms number to change with zeros
+        // Choose randoms number to change with zeros
+        gameTable();
     }
 
-    // For each quadrante, 5 numbers will change with zeros, creating a random illusion
+    /**
+     * For each quadrante, 5 numbers will change with zeros, creating a random illusion
+     */
     private void gameTable(){
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
@@ -39,7 +44,11 @@ public class Sudoku implements ISudoku{
         }
     }
 
-    // Method that creates an ArrayList that have 5 random indexes to change numbers
+    /**
+     * Method that creates an ArrayList that have 5 random indexes to change numbers
+     *
+     * @return an ArrayList with 5 non-repeat random numbers.
+     */
     private ArrayList<Integer> getRandomNumbers(){
         ArrayList<Integer> randomNumbers = new ArrayList<>();
         while (randomNumbers.size() < 5){
@@ -51,22 +60,45 @@ public class Sudoku implements ISudoku{
         return randomNumbers;
     }
 
-    // Set number in (row,col) position
+    /**
+     * Set number in (row,col) position
+     *
+     * @param number    Integer number value
+     * @param row       Row position
+     * @param col       Column position
+     */
     public void setNumber(int number,int row, int col){
         fullSudokuTable.get(row).set(col, number);
     }
 
-    // Verify if a number in (row,col) position is different from zero
+    /**
+     * Verify if a number in (row,col) position is different from zero
+     *
+     * @param row      Row position
+     * @param col      Column position
+     * @return         True if number is not 0, false if number is 0
+     */
     public boolean isNotEmpty(int row, int col){
         return (fullSudokuTable.get(row).get(col) != 0);
     }
 
-    // Return a number in (row,col) position
+    /**
+     * Return a number in (row,col) position
+     *
+     * @param row       Row position
+     * @param col       Column position
+     * @return          Number in (row,col) position
+     */
     public int getNumber(int row, int col){
         return fullSudokuTable.get(row).get(col);
     }
 
-    // Return true if Sudoku Table doesn't have any zeros
+    /**
+     * Return true if Sudoku Table doesn't have any zeros
+     *
+     * @return  false if in Sudoku Table exist at least one zero,
+     * if it doesn't exist any zero, return true
+     */
     public boolean sudokuComplete() {
         for (ArrayList<Integer> row : fullSudokuTable) {
             for (int number : row) {
